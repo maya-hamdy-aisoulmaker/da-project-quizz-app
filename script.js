@@ -1,18 +1,40 @@
-const highscoreDisplay = document.getElementById("highscoreDisplay");
+import { getTemplate } from "./template.js";
 
-let question = [];
+let questions = [];
 let currentQuestion = 0;
 let score = 0;
 
-// Elemente referenzieren (per ID – stabil)
-const questionText = document.getElementById("questionText");
-const answerContainer = document.getElementById("answers");
-const nextButton = document.getElementById("nextButton");
-const progressBar = document.getElementById("progressBar");
-const quizView = document.getElementById("quizView");
-const resultView = document.getElementById("resultView");
-const resultAlert = document.getElementById("resultAlert");
-const restartBtn = document.getElementById("restartBtn");
+let quizView, resultView, progressBar, questionText, answerContainer, nextButton, resultAlert, restartBtn, highscoreDisplay;
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const appRoot = document.getElementById("appRoot");
+  appRoot.innerHTML = getTemplate();
+
+  // Elemente global zuweisen
+  highscoreDisplay = document.getElementById("highscoreDisplay");
+  questionText = document.getElementById("questionText");
+  answerContainer = document.getElementById("answers");
+  nextButton = document.getElementById("nextButton");
+  progressBar = document.getElementById("progressBar");
+  quizView = document.getElementById("quizView");
+  resultView = document.getElementById("resultView");
+  resultAlert = document.getElementById("resultAlert");
+  restartBtn = document.getElementById("restartBtn");
+
+  // Events erst hier setzen
+  nextButton.addEventListener("click", () => {
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+      loadQuestion();
+    } else {
+      showResult();
+    }
+  });
+
+  restartBtn.addEventListener("click", restartQuiz);
+
+  await loadQuestionsFromJSON();
+});
 
 function getHighscore() {
   return localStorage.getItem("quizHighscore") || 0;
@@ -140,13 +162,10 @@ restartBtn.addEventListener("click", restartQuiz);
 // Erste Frage laden
 async function loadQuestionsFromJSON() {
   try {
-    const response = await fetch('questions.json'); // Datei muss im gleichen Ordner wie index.html liegen
+    const response = await fetch("questions.json"); // Datei muss im gleichen Ordner wie index.html liegen
     questions = await response.json();
     loadQuestion();
   } catch (error) {
     console.error("Fehler beim Laden der Fragen:", error);
   }
 }
-
-// Start
-loadQuestionsFromJSON();
