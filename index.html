@@ -12,24 +12,27 @@
 </head>
 
 <body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded-top">
+    <div class="container d-flex justify-content-center align-items-center">
+      <span class="navbar-brand me-3">Wow Bots Quizz</span>
+      <span class="navbar-text" id="highscoreDisplay">🏅 Highscore: 0</span>
+    </div>
+  </nav>
   <div class="container py-4">
     <div class="card shadow-lg w-100 mx-auto" style="max-width: 600px;">
-      
+
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded-top">
-        <div class="container d-flex justify-content-center align-items-center">
-          <span class="navbar-brand me-3">Wow Bots Quizz</span>
-          <span class="navbar-text" id="highscoreDisplay">🏅 Highscore: 0</span>
-        </div>
-      </nav>
+
 
       <!-- Hauptbereich -->
       <div class="card-body">
 
         <!-- Roboter-Video -->
         <div class="text-center mb-1">
-          <video controls class="quiz-robot">
-            <source src="img/Gen-3 Alpha Turbo 3114889655, both robots are chat, Cropped - 0_3-2webp.mp4" type="video/mp4">
+          <video controls controlsList="nodownload noplaybackrate disablepictureinpicture" disablePictureInPicture
+            class="quiz-robot">
+            <source src="img/Gen-3 Alpha Turbo 3114889655, both robots are chat, Cropped - 0_3-2webp.mp4"
+              type="video/mp4">
             Dein Browser unterstützt das Video-Tag nicht.
           </video>
         </div>
@@ -39,8 +42,8 @@
           <!-- Fortschrittsbalken -->
           <div class="mb-3">
             <div class="progress">
-              <div id="progressBar" class="progress-bar bg-success" role="progressbar"
-                style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              <div id="progressBar" class="progress-bar bg-success" role="progressbar" style="width: 0%;"
+                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                 0 / 3
               </div>
             </div>

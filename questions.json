@@ -1,0 +1,17 @@
+[
+    {
+      "question": "Welcher Bot lädt dich gleich zu Anfang zu einem Tee ein?",
+      "answers": ["Herzensbot", "Luftbot", "Lilabot", "Begleitbot"],
+      "correct": 0
+    },
+    {
+      "question": "Wofür steht AI Soul Maker?",
+      "answers": ["Für einen Magier.", "Für eine Methode, um charaktervolle AI Bots zu entwickeln.", "Spinnerei", "Luftikus"],
+      "correct": 1
+    },
+    {
+      "question": "Für wen wurde der KATI Bot entwickelt?",
+      "answers": ["Schulen", "Firmen", "Kindergärten", "Einkaufsläden"],
+      "correct": 2
+    }
+  ]
