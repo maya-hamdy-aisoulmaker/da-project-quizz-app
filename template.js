@@ -1,6 +1,6 @@
 export function getTemplate() {
   return `
-    <div class="card shadow-lg w-100 mx-auto" style="max-width: 600px;">
+    <div class="card shadow-lg quiz-card w-100 mx-auto">
       <div class="card-body text-center">
 
         <video 
@@ -19,7 +19,7 @@ export function getTemplate() {
                  role="progressbar" 
                  style="width: 0%;" 
                  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-              0 / 3
+              0 / 0
             </div>
           </div>
 
@@ -32,7 +32,7 @@ export function getTemplate() {
         </div>
 
         <div id="resultView" class="d-none">
-          <div id="resultAlert" class="alert alert-info">Ergebnis kommt hier rein…</div>
+          <div id="resultAlert" class="alert alert-info"></div>
           <div class="d-grid mt-3">
             <button id="restartBtn" class="btn btn-primary">🔄 Nochmal spielen</button>
           </div>
