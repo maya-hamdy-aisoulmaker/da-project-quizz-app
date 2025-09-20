@@ -1,0 +1,98 @@
+/* Hintergrund für die gesamte App */
+body {
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Card etwas hervorheben */
+  .card {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* Antwort-Buttons */
+  .list-group-item {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .list-group-item:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Richtig/Falsch-Styling */
+  .list-group-item-success {
+    background-color: #38a169 !important;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .list-group-item-danger {
+    background-color: #e53e3e !important;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Fortschrittsbalken schöner machen */
+  .progress {
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  /* Final-Screen (Bootstrap Alert) */
+.alert {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Varianten für Sieg/Niederlage */
+  .alert-success {
+    background-color: #38a169;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .alert-danger {
+    background-color: #e53e3e;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .alert-info {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: white;
+    font-weight: bold;
+  }
+
+  /* Restart-Button Animation */
+#restartBtn {
+  animation: pulse 1.5s infinite;
+  transition: transform 0.2s ease;
+}
+
+#restartBtn:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
