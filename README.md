@@ -1,0 +1,1 @@
+# Meine Quizz-App Projekt wurde als Experiment vollständig mit KI erstellt. Ich wollte einfach sehen, wie gut und sauber die Umsetzung meiner Idee nur mit KI funktioniert. Hier habe ich allerdings alles Schritt für Schritt erstellen lassen, damit sich die KI nicht verschluckt und dann in der Bugproduktion verstrickt.
